@@ -1,4 +1,4 @@
-// Arquivo: jokenpoScript.js
+
 
 document.addEventListener('DOMContentLoaded', function() {
     let escolhaUsuario = '';
@@ -6,16 +6,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const resultadoDiv = document.getElementById('resultado');
     const jogarBtn = document.getElementById('jogar');
 
-    // Adiciona evento de clique para todas as escolhas
+  
     escolhas.forEach(escolha => {
         escolha.addEventListener('click', function() {
-            escolhaUsuario = this.id; // 'pedra', 'papel' ou 'tesoura'
+            escolhaUsuario = this.id; 
             escolhas.forEach(el => el.classList.remove('selecionado'));
             this.classList.add('selecionado');
         });
     });
 
-    // Evento de clique do botão Jogar
+   
     jogarBtn.addEventListener('click', function() {
         if (!escolhaUsuario) {
             resultadoDiv.textContent = 'Por favor, selecione uma opção.';
